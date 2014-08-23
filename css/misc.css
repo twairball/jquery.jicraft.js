@@ -1,0 +1,48 @@
+
+// navbar
+/*.navbar-brand {margin-top:0;padding:0;}*/
+.navbar {
+	border: none;
+	border-radius: 0;
+}
+.navbar-mdm {
+	border-top: 1px #e6e6e6 solid;
+}
+
+// something is obstructing bootstrap-sass....?
+.nav > li > a {color: #fff; text-decoration: none; background-color: transparent;}
+.nav > li > a:hover {color: #00BD9D; text-decoration: none; background-color: #fff;}
+.navbar-text {color: #ddd;}
+.nav > li > a:active {background-color: #00BD9D;}
+.nav > li > a.here {border-top: 3px solid #efefef;}
+
+#nav-wrapper-migo.affix {
+	top:0; left: 0;
+	padding-left: 30px; padding-right: 30px;
+	margin-top: auto;
+	width: 100%;
+	background-color: #fff;
+	color: #00BD9D;
+	border-bottom: 1px solid #00BD9D; 
+	z-index: 100;
+}
+
+#nav-wrapper-migo.affix .navbar {
+		margin-bottom: 0;
+		border-top: none;
+}
+
+.navbar-migo .icon-bar {
+	background-color: #00BD9D;
+}
+
+.navbar-migo .nav > li > a {
+	color: #00BD9D;
+}
+.navbar-migo .navbar-text {font-size: 14px; color: #00BD9D;}
+}
+
+
+.btn-primary {
+	background-color: #00BD9D;
+}

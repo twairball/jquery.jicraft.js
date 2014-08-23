@@ -1,0 +1,54 @@
+	html,body { height: 100%; margin: 0px; padding: 0px; }
+
+	.full { min-height: 100%;}
+	.jumbotron.full, .jumbotron.bg-feature-1, .jumbotron.bg-feature-2, .jumbotron.bg-feature-3 {margin-bottom: 0;}
+	.section {
+	    position: relative;
+	    border-bottom: 1px lightgray solid;
+	    padding: 150px 0 100px 0;
+	}
+	.bg-migo {
+		background: url('../images/banner.png');
+	 	background-position: 50% 50%;
+	    background-size: cover;
+	}
+	.screenshot {
+	    box-shadow: 0 4px 22px rgba(0,0,0,0.6);
+	}
+	.scroll-to {
+		border-radius: 52px;
+		border: 3px solid;
+		font-size: 24px;
+		height: 52px;
+		line-height: 70px;
+		margin: 0 auto;
+		width: 52px;
+		display: block;
+	}
+
+	.scroll-to i {vertical-align: super; margin-top: 8px;}
+	
+	.scroll-to-wrapper{
+		position: absolute; bottom: 13px; left: 50%; margin-left: -26px;
+	}
+	.typed-cursor{
+	    opacity: 1;
+	    -webkit-animation: blink 0.7s infinite;
+	    -moz-animation: blink 0.7s infinite;
+	    animation: blink 0.7s infinite;
+	}
+	@keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+	    0% { opacity:1; }
+	    50% { opacity:0; }
+	    100% { opacity:1; }
+	}

@@ -1,0 +1,42 @@
+// custom CSS styles
+body {
+	font-family: 'ProximaNovaReg', 'Microsoft Yahei', '微软雅黑', 'STXihei', '华文细黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// links
+a {color: #00BD9D;}
+a:hover {text-decoration: none;}
+
+// logo
+.logo-inverse {
+	img {width: 175px;}
+}
+
+// modals
+#loginModal, #signupModal {
+	text-align: left;
+	color: #666;
+}
+
+// wispy buttons
+.btn-outline{color: #004E57; background-color: transparent; border-color: #004E57;}
+.btn-outline:hover,.btn-outline:focus,
+.btn-outline:active{color:#fff	;text-shadow:none;background-color:#004E57;border-color:#004E57;}
+.btn-outline-inverse {color: #fff; background-color: transparent; border-color: #fff;}
+.btn-outline-inverse:hover,.btn-outline-inverse:focus,
+.btn-outline-inverse:active{color:#00626E;text-shadow:none;background-color:#fff;border-color:#fff}
+
+.timestamp {
+	font-style: italic;
+	margin-right: 5px;
+	font-size: 11px;
+	color: #999;
+}
+
+// footer
+footer{
+	border-top: 1px solid #ddd;
+	color: #666;
+	/*background-color: #f5f5f5;*/
+	background-color: #fff;
+}

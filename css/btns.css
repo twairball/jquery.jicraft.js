@@ -1,0 +1,15 @@
+.btn-lg-plus {
+	border-width: 2px; font-size: 28px;
+}
+
+.btn-flat {
+	color: #fff;
+	border: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.btn-flat, .btn-primary.btn-flat {
+	background-color: #00BD9D;
+	-webkit-box-shadow: 0 3px 0 0 #008A73;
+	box-shadow: 0 3px 0 0 #008A73;
+}

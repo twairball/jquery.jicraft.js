@@ -1,0 +1,176 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>集匠 API DEMO</title>
+
+    
+
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	
+	<link href="css/hello.css" rel="stylesheet">
+    <link href="css/items.css" rel="stylesheet">
+    <link href="css/misc.css" rel="stylesheet">
+    <link href="css/btns.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="js/jquery.jicraft.js"></script>
+
+</head>
+<body>
+
+<div class="jumbotron full text-center bg-migo" >
+
+	<h1 style="margin-top: 15%;">集匠</h1>
+	<h2>网站模版 DEMO</h2>
+
+	<p style="margin-top: 5%;">
+	本DEMO使用集匠API资源管理 
+	</p>
+
+	<p>
+		<a id='jq-test-btn' class="btn btn-lg btn-lg-plus btn-flat" href="#">Down Jacket FW14 相册</a>
+		<!-- <a id='mary-h-btn' class="btn btn-lg btn-lg-plus btn-flat" href="#">灌入 MARY-H相册</a> -->
+		<!-- <a id='aj-shoes-btn' class="btn btn-lg btn-lg-plus btn-flat" href="#">灌入 AJ-SHOES相册</a> -->
+	</p>
+
+	<div class="text-center scroll-to-wrapper">
+		<a href="#feature-1" class="scroll-to hidden-xs"><i class="fa fa-chevron-down"></i></a>
+	</div>
+</div>
+
+<div class="jicraft-collection">
+
+</div>
+
+
+<!-- hide template -->
+<div style="display: none;">
+	<div id="jicraft-collection-template">
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-5">
+						<h1 class="jicraft-item-title">item title here</h1>
+						<h3>注重产品细节 打造行业精品</h3>
+						
+						<p style="font-size: 16px; margin-top: 45px;">
+							集匠 是个新的产品图片展示相册
+						</p>
+
+						<p>
+							<a href="#" class='btn btn-lg btn-lg-plus btn-flat'>
+								<i class="fa fa-chevron-down"></i>了解更多
+							</a>
+						</p>
+					</div>
+					<div class="col-sm-5 hidden-xs">
+						<div class="jj-load" data-image-url="">
+							<img src="" class="jicraft-img img-responsive screenshot"/>
+						</div>
+					</div>
+					<div class="col-sm-1 hidden-xs"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
+      微信: yurongwg<br>
+      QQ: 1919350858<br>
+      邮箱: hello@jicraft.com<br>
+      电话: 021-51103191<br>
+      </div>
+
+      <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
+      厂商合作<br>
+      邮箱: bd@yurongweigou.com<br>
+      </div>
+
+      <div class="col-lg-4" style="padding-top: 20px; padding-bottom: 20px;">
+      加入我们团队！<br>
+      邮箱: hr@yurongweigou.com<br>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12 icp-beian" style="padding-top: 20px; padding-bottom: 20px;">
+    沪ICP备 14006161
+    </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+</script>
+
+<script>
+$(function() {
+	$('#jq-test-btn').on('click', function(e) {
+		e.preventDefault;
+		console.log('#jq-test-btn clicked');
+		$('.jicraft-collection').jicraft_gallery({collectionUrl: 'http://jicraft.com/collections/down-jackets-fw14.json'});
+	});
+});
+</script>
+
+<script>
+	var c = $('.jicraft-collection').first();
+	var j = new $.jicraft(c);
+	j.fetch_json();
+</script>
+<!-- 
+<script>
+	$(function() {
+		$('#mary-h-btn').on('click', function(e) {
+			e.preventDefault;
+			console.log('#mary-h-btn clicked');
+			$('.content').empty();
+			// sections_from_api("http://jicraft.com/collections/mary-h-demo.json");
+
+		});
+
+		$('#aj-shoes-btn').on('click', function(e) {
+			e.preventDefault;
+			console.log('#aj-shoes-btn clicked');
+			$('.content').empty();
+			sections_from_api("http://jicraft.com/collections/aj-shoes-fw14.json");
+		});
+	});
+</script>
+ -->
